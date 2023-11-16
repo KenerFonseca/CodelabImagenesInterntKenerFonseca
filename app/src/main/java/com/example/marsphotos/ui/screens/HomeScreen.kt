@@ -18,7 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.marsphotos.R
 import com.example.marsphotos.ui.theme.MarsPhotosTheme
-
+//es la pantalla principal que muestra los diferentes estados de la app
 @Composable
 fun HomeScreen(
     marsUiState: MarsUiState, modifier: Modifier = Modifier
@@ -31,7 +31,7 @@ fun HomeScreen(
     }
 }
 
-
+//Muestra la imagene de carga cuando el estado de la app esta cargando.
 @Composable
 fun LoadingScreen(modifier: Modifier = Modifier) {
     Image(
@@ -40,7 +40,7 @@ fun LoadingScreen(modifier: Modifier = Modifier) {
         contentDescription = stringResource(R.string.loading)
     )
 }
-
+//Muestra una imagen de error y el mensaje cuando el estado de la app sale un error.
 @Composable
 fun ErrorScreen(modifier: Modifier = Modifier) {
     Column(
@@ -55,7 +55,7 @@ fun ErrorScreen(modifier: Modifier = Modifier) {
     }
 }
 
-
+//Muestar un mensaje de exito y muestra el numero de fotos recolectada
 @Composable
 fun ResultScreen(photos: String, modifier: Modifier = Modifier) {
     Box(
@@ -65,7 +65,7 @@ fun ResultScreen(photos: String, modifier: Modifier = Modifier) {
         Text(text = photos)
     }
 }
-
+// Vista previa del estado de carga.
 @Preview(showBackground = true)
 @Composable
 fun LoadingScreenPreview() {
@@ -73,7 +73,7 @@ fun LoadingScreenPreview() {
         LoadingScreen()
     }
 }
-
+// Vista previa del estado de error.
 @Preview(showBackground = true)
 @Composable
 fun ErrorScreenPreview() {
@@ -81,7 +81,7 @@ fun ErrorScreenPreview() {
         ErrorScreen()
     }
 }
-
+// Vista previa del estado del resultado.
 @Preview(showBackground = true)
 @Composable
 fun PhotosGridScreenPreview() {
